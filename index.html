@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spoke &amp; Sprocket – Bike Repair Shop</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#eef3f6;--surface:#fff;--ink:#12202e;--muted:#52626f;--accent:#f2b705;--accent-ink:#12202e;--line:#cfdae1;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1822;--surface:#16242f;--ink:#eaf0f4;--muted:#9fb0bc;--line:#2a3b48}}
+:root[data-theme="dark"]{--bg:#0e1822;--surface:#16242f;--ink:#eaf0f4;--muted:#9fb0bc;--line:#2a3b48}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
+.bar{max-width:60rem;margin:0 auto;padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:.45rem .9rem;border-radius:.5rem;color:var(--muted);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="page"]{background:var(--accent);color:var(--accent-ink)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:.5rem;padding:.4rem .8rem;font:inherit;font-weight:600;cursor:pointer}
+main{max-width:60rem;margin:0 auto;padding:3rem 1.25rem 4rem}
+.view{display:none}.view.active{display:block}
+h1{font-size:clamp(2.4rem,7vw,4.5rem);line-height:1.02;letter-spacing:-.03em;font-weight:800;margin:0 0 1.25rem;max-width:14ch}
+h2{font-size:1.8rem;letter-spacing:-.02em;margin:0 0 1rem}
+p{max-width:60ch;color:var(--muted);margin:0 0 1rem}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:.8rem 1.4rem;border-radius:.5rem;font-weight:800;text-decoration:none;margin-top:.5rem}
+.list{list-style:none;padding:0;margin:1.5rem 0 0;border-top:1px solid var(--line)}
+.list li{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.list strong{color:var(--ink);display:block}
+.list span{color:var(--muted);font-size:.95rem}
+.list .price{font-weight:800;color:var(--ink);white-space:nowrap}
+label{display:block;font-weight:600;margin:1rem 0 .3rem}
+input,textarea{width:100%;max-width:30rem;font:inherit;padding:.7rem;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--ink)}
+footer{max-width:60rem;margin:0 auto;padding:1.5rem 1.25rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+#sent{font-weight:600;color:var(--ink);margin-top:1rem}
+@media (max-width:640px){
+.menu{display:block}
+nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1.25rem}
+nav.open{display:block}
+nav ul{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="logo" href="#home">Spoke &amp; Sprocket</a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="view">
+    <h1>Your bike, back on the road.</h1>
+    <p>Fast, honest repairs for commuter, road and cargo bikes. Most fixes are done the same day.</p>
+    <a class="btn" href="#contact">Book a repair</a>
+  </section>
+
+  <section id="services" class="view">
+    <h2>Services</h2>
+    <p>Prices include labor. Parts are extra and we always quote before we start.</p>
+    <ul class="list">
+      <li><div><strong>Flat tire fix</strong><span>Patch or new tube, pump to pressure</span></div><div class="price">$15</div></li>
+      <li><div><strong>Brake adjustment</strong><span>Pads, cables and alignment</span></div><div class="price">$25</div></li>
+      <li><div><strong>Full tune-up</strong><span>Gears, brakes, wheels and chain</span></div><div class="price">$80</div></li>
+      <li><div><strong>Wheel truing</strong><span>Straighten a wobbly wheel</span></div><div class="price">$30</div></li>
+    </ul>
+  </section>
+
+  <section id="about" class="view">
+    <h2>About the shop</h2>
+    <p>Spoke &amp; Sprocket started in a garage with one work stand and a lot of spare tubes. Today we are a small team of mechanics who ride to work every day.</p>
+    <p>We explain what is wrong, show you the worn part, and only fix what you agree to.</p>
+  </section>
+
+  <section id="contact" class="view">
+    <h2>Book a repair</h2>
+    <p>Tell us what is wrong and we will reply with a quote and a drop-off time.</p>
+    <form id="form">
+      <label for="name">Your name</label>
+      <input id="name" required>
+      <label for="msg">What needs fixing?</label>
+      <textarea id="msg" rows="4" required></textarea>
+      <button class="btn" type="submit" style="border:0;cursor:pointer;font:inherit;font-weight:800">Send request</button>
+    </form>
+    <p id="sent" role="status"></p>
+  </section>
+</main>
+
+<footer>&copy; 2026 Spoke &amp; Sprocket. Open Tuesday to Saturday, 9am to 6pm.</footer>
+
+<script>
+(function(){
+  var views=[].slice.call(document.querySelectorAll('.view'));
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var nav=document.getElementById('nav'), btn=document.querySelector('.menu');
+  function show(){
+    var id=(location.hash||'#home').slice(1);
+    if(!views.some(function(v){return v.id===id})) id='home';
+    views.forEach(function(v){v.classList.toggle('active',v.id===id)});
+    links.forEach(function(a){
+      if(a.getAttribute('href')==='#'+id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    nav.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+    window.scrollTo(0,0);
+  }
+  btn.addEventListener('click',function(){
+    var o=nav.classList.toggle('open'); btn.setAttribute('aria-expanded',o);
+  });
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('sent').textContent='Request sent. We will reply with a quote soon.';
+    e.target.reset();
+  });
+  window.addEventListener('hashchange',show);
+  show();
+})();
+</script>
+</body>
+</html>
